@@ -1,0 +1,32 @@
+Name,Gender,Father_Name,Mother_Name,Married_to
+King Arthur,Male,,,Queen Margret
+Queen Margret,Female,,,King Arthur
+Bill,Male,King Arthur,Queen Margret,Flora
+Flora,Female,,,Bill
+Charles,Male,King Arthur,Queen Margret,
+Percy,Male,King Arthur,Queen Margret,Audrey
+Audrey,Female,,,Percy
+Ronald,Male,King Arthur,Queen Margret,Helen
+Helen,Female,,,Ronald
+Ginerva,Female,King Arthur,Queen Margret,Harry
+Harry,Male,,,Ginerva
+Victoire,Female,Bill,Flora,Ted
+Ted,Male,,,Victoire
+Dominque,Female,Bill,Flora,
+Louis,Male,Bill,Flora,
+Molly,Female,Percy,Audrey,
+Lucy,Female,Percy,Audrey,
+Malfoy,Male,,,Rose
+Rose,Female,Ronald,Helen,Malfoy
+Hugo,Male,Ronald,Helen,
+Darcy,Female,,,James
+James,Male,Harry,Ginerva,Darcy
+Alice,Female,,,Albus
+Albus,Male,Harry,Ginerva,Alice
+Lily,Female,Harry,Ginerva,
+Remus,Male,Ted,Victoire,
+Draco,Male,Malfoy,Rose,
+Aster,Female,Malfoy,Rose,
+William,Male,James,Darcy,
+Ron,Male,Albus,Alice,
+Ginny,Female,Albus,Alice,
