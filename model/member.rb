@@ -9,6 +9,6 @@ class Member
 		@mother_name = mother_name
 		@family_tree = family_tree
 
-		@family_tree.member << self
+		@family_tree.family_members << self
 	end
 end
