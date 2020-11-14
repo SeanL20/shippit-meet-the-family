@@ -1,7 +1,8 @@
-require_relative 'person'
+require_relative 'member'
+require 'csv'
 
-Class FamilyTree
-	attr_acessor :family_members, :name
+class FamilyTree
+	attr_accessor :family_members, :name
 
 	def initialize(name)
 		@name = name
@@ -10,7 +11,16 @@ Class FamilyTree
 
 	def find_by_name(name)
 		family_members.each do |fam_mem|
-			fam_mem.name == name ? return fem_mem : return nil
+			if fam_mem.name == name
+				return fam_mem
+			end
+		end
+		return nil
+	end
+
+	def import(csv_data)
+		CSV.foreach(csv_data, :headers => true) do |data|
+			Member.new(data["Name"], data["Gender"], data["Married_To"], data["Father_Name"], data["Mother_Name"], self)
 		end
 	end
 end
