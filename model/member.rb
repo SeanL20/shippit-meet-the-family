@@ -1,5 +1,5 @@
 class Member
-	attr_accessor :name, :gender, :married_to, :father_name, :mother_name
+	attr_accessor :name, :gender, :married_to, :father_name, :mother_name, :family_tree
 
 	def initialize(name, gender, married_to, father_name, mother_name, family_tree)
 		@name = name
