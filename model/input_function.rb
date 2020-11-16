@@ -1,3 +1,5 @@
+require_relative 'family_tree'
+
 class InputFunction
 	def initialize(family_tree, input_file)
 		@family_tree = family_tree
@@ -18,11 +20,12 @@ class InputFunction
 	end
 
 	def add_child(mother_name, child_name, child_gender)
-		if @family_tree.find_by_name(mother_name) != nil && @family_tree.find_by_name(mother_name).gender != male
+		if @family_tree.find_by_name(mother_name) != nil && @family_tree.find_by_name(mother_name).gender != "Male"
 			mother = @family_tree.find_by_name(mother_name)
 
 			Member.new(child_name, child_gender, nil, mother.name, mother.married_to, @family_tree)
-		elsif @family_tree.find_by_name(mother_name) != nil && @family_tree.find_by_name(mother_name).gender == male
+			puts "CHILD_ADDED"
+		elsif @family_tree.find_by_name(mother_name) != nil && @family_tree.find_by_name(mother_name).gender == "Male"
 			puts "CHILD_ADDITION_FAILED"
 		elsif @family_tree.find_by_name(mother_name) == nil
 			puts "PERSON_NOT_FOUND"
@@ -31,7 +34,7 @@ class InputFunction
 
 	def get_relationships(name, relationship)
 		if @family_tree.find_by_name(mother_name) != nil
-
+			
 		else
 			puts "PERSON_NOT_FOUND"
 		end
