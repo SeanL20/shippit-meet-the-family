@@ -1,4 +1,4 @@
-require_relative 'family_tree'
+require_relative 'relation_function'
 
 class InputFunction
 	def initialize(family_tree, input_file)
@@ -42,33 +42,34 @@ class InputFunction
 	end
 
 	def check_relationship(member_name, relationship)
+		relation_function = RelationFunction.new(@family_tree)
 		case relationship
 		when "Paternal-Uncle"
-			member_array = @family_tree.get_pateral_uncle(member_name)
+			member_array = relation_function.get_pateral_uncle(member_name)
 			convert_array_to_string(member_array)
 		when "Materal-Uncle"
-			member_array = @family_tree.get_materal_uncle(member_name)
+			member_array = relation_function.get_materal_uncle(member_name)
 			convert_array_to_string(member_array)
 		when "Paternal-Aunt"
-			member_array = @family_tree.get_pateral_aunt(member_name)
+			member_array = relation_function.get_pateral_aunt(member_name)
 			convert_array_to_string(member_array)
 		when "Materal-Aunt"
-			member_array = @family_tree.get_materal_aunt(member_name)
+			member_array = relation_function.get_materal_aunt(member_name)
 			convert_array_to_string(member_array)
 		when "Sister-In-Law"
-			member_array = @family_tree.get_sister_in_law(member_name)
+			member_array = relation_function.get_sister_in_law(member_name)
 			convert_array_to_string(member_array)
 		when "Brother-In-Law"
-			member_array = @family_tree.get_brother_in_law(member_name)
+			member_array = relation_function.get_brother_in_law(member_name)
 			convert_array_to_string(member_array)
 		when "Son"
-			member_array = @family_tree.get_sons(member_name)
+			member_array = relation_function.get_sons(member_name)
 			convert_array_to_string(member_array)
 		when "Daughter"
-			member_array = @family_tree.get_daughters(member_name)
+			member_array = relation_function.get_daughters(member_name)
 			convert_array_to_string(member_array)
 		when "Sibling"
-			member_array = @family_tree.get_siblings(member_name)
+			member_array = relation_function.get_siblings(member_name)
 			convert_array_to_string(member_array)
 		else
 		  puts "NONE"
