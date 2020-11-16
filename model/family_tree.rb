@@ -174,6 +174,11 @@ class FamilyTree
 	end
 
 	def get_materal_aunt(member_name)
-		
+		mother = get_mother(member_name)
+		sister_array = []
+		if mother != nil
+			sister_array = get_sisters(mother.name)
+		end
+		return sister_array
 	end
 end
