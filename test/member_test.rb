@@ -25,6 +25,10 @@ class MemberTest < Minitest::Test
   end
 
  	def test_first_element_name
+    assert_instance_of Member, @members[0]
+  end
+
+  def test_first_element_name
     assert_equal "King Arthur", @members[0].name
   end
 
