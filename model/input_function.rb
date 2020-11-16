@@ -7,13 +7,14 @@ class InputFunction
 	end
 
 	def input_call()
-		File.open(@input_file).each do |line|
+
+		File.foreach(@input_file) do |line|
 			input = line.split(' ')
 			function = input.first
 
 			if function == "ADD_CHILD"
 				add_child(input[1], input[2], input[3])
-			elsif function == "GET_RELATIONSHIPS"
+			elsif function == "GET_RELATIONSHIP"
 				get_relationships(input[1], input[2])
 			end
 		end
@@ -32,11 +33,30 @@ class InputFunction
 		end
 	end
 
-	def get_relationships(name, relationship)
-		if @family_tree.find_by_name(mother_name) != nil
-			
+	def get_relationships(member_name, relationship)
+		if @family_tree.find_by_name(member_name) != nil
+			output = check_relationship(member_name, relationship)
 		else
 			puts "PERSON_NOT_FOUND"
+		end
+	end
+
+	def check_relationship(member_name, relationship)
+		case relationship
+		when "Paternal-Uncle"
+			# puts @family_tree.get_mother(member_name)
+			puts @family_tree.get_siblings(member_name)
+		when "Materal-Uncle"
+		when "Paternal-Aunt"
+		when "Materal-Aunt"
+		when "Sister-In-Law"
+		when "Brother-In-Law"
+		when "Son"
+		when "Daughter"
+		when "Sibling"
+			puts @family_tree.get_siblings(member_name)
+		else
+		  puts "NONE"
 		end
 	end
 end
