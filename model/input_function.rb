@@ -45,13 +45,17 @@ class InputFunction
 		case relationship
 		when "Paternal-Uncle"
 			# puts @family_tree.get_mother(member_name)
-			member_array = @family_tree.get_siblings(member_name)
-			convert_array_to_string(member_array)
 		when "Materal-Uncle"
 		when "Paternal-Aunt"
 		when "Materal-Aunt"
+			member_array = @family_tree.get_materal_aunt(member_name)
+			convert_array_to_string(member_array)
 		when "Sister-In-Law"
+			member_array = @family_tree.get_sister_in_law(member_name)
+			convert_array_to_string(member_array)
 		when "Brother-In-Law"
+			member_array = @family_tree.get_brother_in_law(member_name)
+			convert_array_to_string(member_array)
 		when "Son"
 			member_array = @family_tree.get_sons(member_name)
 			convert_array_to_string(member_array)
