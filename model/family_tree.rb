@@ -190,4 +190,13 @@ class FamilyTree
 		end
 		return sister_array
 	end
+
+	def get_materal_uncle(member_name)
+		mother = get_mother(member_name)
+		brother_array = []
+		if mother != nil
+			brother_array = get_brothers(mother.name)
+		end
+		return brother_array
+	end
 end
