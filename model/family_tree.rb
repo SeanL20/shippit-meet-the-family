@@ -199,4 +199,13 @@ class FamilyTree
 		end
 		return brother_array
 	end
+
+	def get_pateral_uncle(member_name)
+		father = get_father(member_name)
+		brother_array = []
+		if father != nil
+			brother_array = get_brothers(father.name)
+		end
+		return brother_array
+	end
 end

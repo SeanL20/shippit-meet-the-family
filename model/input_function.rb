@@ -44,8 +44,7 @@ class InputFunction
 	def check_relationship(member_name, relationship)
 		case relationship
 		when "Paternal-Uncle"
-			# puts @family_tree.get_mother(member_name)
-			member_array = @family_tree.get_materal_uncle(member_name)
+			member_array = @family_tree.get_pateral_uncle(member_name)
 			convert_array_to_string(member_array)
 		when "Materal-Uncle"
 			member_array = @family_tree.get_materal_uncle(member_name)
