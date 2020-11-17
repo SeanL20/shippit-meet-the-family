@@ -4,8 +4,6 @@ require_relative "../model/family_tree"
 class FamilyTreeTest < Minitest::Test
 
   def setup
-    member_array = []
-
     @family_tree = FamilyTree.new("Test")
     Member.new("King Arthur", "Male", "Queen Margret", nil, nil, @family_tree)
   end
